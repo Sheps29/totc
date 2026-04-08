@@ -1,6 +1,11 @@
 @import 'colors';
 @import 'mixin';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -10,9 +15,189 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  padding: 30px 120px;
+  background-color: $blue-200;
+
+  @media (max-width: 768px) {
+    padding: 30px 60px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px;
+  }
 
   .logo {
     width: 114px;
     height: 84px;
+  }
+
+  nav {
+    display: contents;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex: 1;
+      max-width: 720px;
+
+      li a {
+        @include s;
+        text-decoration: none;
+        color: $white;
+      }
+    }
+
+    div {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+
+      button {
+        @include btn;
+        width: 160px;
+      }
+
+      button:first-of-type {
+        color: $grey-100;
+      }
+
+      button:last-of-type {
+        opacity: 30%;
+        box-shadow: 0 3px 0.2em $grey-100;
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.promo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 120px 0;
+  // background-color: $blue-200;
+  background-image: url(../images/bg1.png);
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    padding: 40px 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 30px 0;
+  }
+
+  .info {
+    max-width: 680px;
+
+    h1 {
+      @include x8l;
+      color: white;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    p {
+      @include m;
+      line-height: 1.6em;
+      color: $white;
+      margin: 34px 0 52px;
+    }
+
+    div {
+      display: flex;
+      gap: 40px;
+
+      button {
+        @include btn;
+        opacity: 30%;
+        box-shadow: 0 3px 0.2em $grey-100;
+      }
+
+      a {
+        @include m;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        img {
+          width: 80px;
+          height: 80px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  // .pictures {
+  //   display: grid;
+  //   aspect-ratio: 910 / 892;
+
+  //   picture {
+  //     grid-area: 1 / 1;
+  //   }
+
+  //   picture:first-of-type {
+  //     max-width: 544px;
+  //     max-height: 892px;
+  //     justify-self: center;
+
+  //     .img1 {
+  //       object-fit: cover;
+  //       width: 100%;
+  //       height: auto;
+  //     }
+  //   }
+
+  //   picture:last-of-type {
+  //     max-width: 910px;
+  //     max-height: 577px;
+  //     align-self: center;
+
+  //     .img2 {
+  //       object-fit: cover;
+  //       width: 100%;
+  //       height: auto;
+  //     }
+  //   }
+  // }
+
+  picture {
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+
+    .img1 {
+      position: relative;
+    }
+
+    .img2 {
+      position: absolute;
+      bottom: 150px;
+      left: 0;
+    }
   }
 }

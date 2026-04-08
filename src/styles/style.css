@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -7,8 +12,147 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  padding: 30px 120px;
+  background-color: #00CBB8;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 30px 60px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 30px;
+  }
 }
 header .logo {
   width: 114px;
   height: 84px;
+}
+header nav {
+  display: contents;
+}
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 720px;
+}
+header nav ul li a {
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+}
+header nav div {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+header nav div button {
+  font-size: 22px;
+  padding: 22px 38px;
+  border-radius: 80px;
+  border: none;
+  width: 160px;
+}
+header nav div button:first-of-type {
+  color: #5B5B5B;
+}
+header nav div button:last-of-type {
+  opacity: 30%;
+  box-shadow: 0 3px 0.2em #5B5B5B;
+}
+header .burger {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .burger {
+    display: block;
+  }
+}
+
+.promo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 120px 0;
+  background-image: url(../images/bg1.png);
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .promo {
+    padding: 40px 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  .promo {
+    padding: 40px 30px 0;
+  }
+}
+.promo .info {
+  max-width: 680px;
+}
+.promo .info h1 {
+  font-size: 54px;
+  color: white;
+}
+.promo .info h1 span {
+  color: #F48C06;
+}
+.promo .info p {
+  font-size: 24px;
+  line-height: 1.6em;
+  color: white;
+  margin: 34px 0 52px;
+}
+.promo .info div {
+  display: flex;
+  gap: 40px;
+}
+.promo .info div button {
+  font-size: 22px;
+  padding: 22px 38px;
+  border-radius: 80px;
+  border: none;
+  opacity: 30%;
+  box-shadow: 0 3px 0.2em #5B5B5B;
+}
+.promo .info div a {
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.promo .info div a img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+.promo picture {
+  position: relative;
+}
+.promo picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.promo picture .img1 {
+  position: relative;
+}
+.promo picture .img2 {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

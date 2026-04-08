@@ -53,3 +53,10 @@
 @mixin x9l {
   font-size: 96px;
 }
+
+@mixin btn {
+  @include s;
+  padding: 22px 38px;
+  border-radius: 80px;
+  border: none;
+}
