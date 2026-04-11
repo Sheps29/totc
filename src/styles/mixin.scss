@@ -60,3 +60,25 @@
   border-radius: 80px;
   border: none;
 }
+
+@mixin h4 {
+  @include x5l;
+  line-height: 1.6em;
+  color: $blue-400;
+
+  span {
+    color: $blue-200;
+  }
+}
+
+@mixin p {
+  @include m;
+  line-height: 1.8em;
+  color: $grey-200;
+}
+
+@mixin img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
