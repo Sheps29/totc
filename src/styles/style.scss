@@ -22,6 +22,10 @@ section {
   }
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -179,10 +183,6 @@ header {
       @include img;
     }
 
-    .img1 {
-      position: relative;
-    }
-
     .img2 {
       position: absolute;
       bottom: 150px;
@@ -191,7 +191,7 @@ header {
   }
 }
 
-.saccess {
+.success {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -229,8 +229,8 @@ header {
       span:first-of-type {
         @include x9l;
         background: linear-gradient(to right, $blue, $blue-100);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
       }
 
       span:last-of-type {
@@ -258,7 +258,7 @@ header {
 
   p {
     @include m;
-    max-width: 837px;
+    max-width: 850px;
     line-height: 1.8em;
     color: $grey-200;
     text-align: center;
@@ -629,5 +629,148 @@ header {
     color: $blue-100;
     border: 1px solid $blue-100;
     background: none;
+  }
+}
+
+.course {
+
+  h4 {
+    @include x5l;
+  }
+
+  p {
+    @include m;
+    color: $grey-100;
+    margin-top: 24px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 100px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      h5 {
+        @include xl;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        img {
+          width: 29px;
+          height: 29px;
+        }
+      }
+
+      button {
+        @include btn;
+        @include m;
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        background: none;
+        color: $blue-300;
+        font-weight: 600;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+
+      @media (max-width: 678px) {
+        flex-wrap: wrap;
+      }
+
+      li {
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.testimonial {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .left {
+    max-width: 610px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    span {
+      @include xs;
+      color: $blue-600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 {
+      @include x8l;
+      color: $blue-400;
+    }
+
+    p {
+      @include l;
+      color: $grey-200;
+      line-height: 40px;
+    }
+
+    button {
+      @include btn;
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: $blue-100;
+      border: 1px solid $blue-100;
+      background: none;
+      padding: 0 0  0 38px;
+    }
+  }
+
+  .right {
+    position: relative;
+
+    picture {
+      max-width: 560px;
+      max-height: 700px;
+      position: relative;
+
+      img:first-of-type {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+
+      .arr {
+        position: absolute;
+        right: -85px;
+        bottom: 350px;
+      }
+    }
+
+    
   }
 }

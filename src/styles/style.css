@@ -21,6 +21,10 @@ section {
   }
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -177,30 +181,27 @@ header .burger {
   width: 100%;
   height: auto;
 }
-.promo picture .img1 {
-  position: relative;
-}
 .promo picture .img2 {
   position: absolute;
   bottom: 150px;
   left: 0;
 }
 
-.saccess {
+.success {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
-.saccess h2 {
+.success h2 {
   font-size: 48px;
 }
-.saccess p {
+.success p {
   font-size: 18px;
   line-height: 1.6em;
   max-width: 750px;
 }
-.saccess ul {
+.success ul {
   list-style: none;
   display: flex;
   gap: 30px;
@@ -210,23 +211,24 @@ header .burger {
   margin-top: 80px;
 }
 @media (max-width: 768px) {
-  .saccess ul {
+  .success ul {
     justify-content: center;
     margin-top: 40px;
   }
 }
-.saccess ul li {
+.success ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.saccess ul li span:first-of-type {
+.success ul li span:first-of-type {
   font-size: 96px;
   background: linear-gradient(to right, #136CB5, #49BBBD);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+          background-clip: text;
+  color: transparent;
 }
-.saccess ul li span:last-of-type {
+.success ul li span:last-of-type {
   font-size: 32px;
   line-height: 1.3em;
 }
@@ -247,7 +249,7 @@ header .burger {
 }
 .software p {
   font-size: 24px;
-  max-width: 837px;
+  max-width: 850px;
   line-height: 1.8em;
   color: #696984;
   text-align: center;
@@ -600,4 +602,131 @@ header .burger {
   color: #49BBBD;
   border: 1px solid #49BBBD;
   background: none;
+}
+
+.course h4 {
+  font-size: 40px;
+}
+.course p {
+  font-size: 24px;
+  color: #5B5B5B;
+  margin-top: 24px;
+}
+.course .list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 100px;
+}
+.course .list div {
+  display: flex;
+  justify-content: space-between;
+}
+.course .list div h5 {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.course .list div h5 img {
+  width: 29px;
+  height: 29px;
+}
+.course .list div button {
+  font-size: 22px;
+  padding: 22px 38px;
+  border-radius: 80px;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  background: none;
+  color: #23BDEE;
+  font-weight: 600;
+}
+.course .list div button img {
+  width: 32px;
+  height: 32px;
+}
+.course .list ul {
+  display: flex;
+}
+@media (max-width: 678px) {
+  .course .list ul {
+    flex-wrap: wrap;
+  }
+}
+.course .list ul li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .testimonial {
+    flex-direction: column;
+  }
+}
+.testimonial .left {
+  max-width: 610px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.testimonial .left span {
+  font-size: 20px;
+  color: #525596;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial .left h3 {
+  font-size: 54px;
+  color: #2F327D;
+}
+.testimonial .left p {
+  font-size: 26px;
+  color: #696984;
+  line-height: 40px;
+}
+.testimonial .left button {
+  font-size: 22px;
+  padding: 22px 38px;
+  border-radius: 80px;
+  border: none;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  color: #49BBBD;
+  border: 1px solid #49BBBD;
+  background: none;
+  padding: 0 0 0 38px;
+}
+.testimonial .right {
+  position: relative;
+}
+.testimonial .right picture {
+  max-width: 560px;
+  max-height: 700px;
+  position: relative;
+}
+.testimonial .right picture img:first-of-type {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.testimonial .right picture .arr {
+  position: absolute;
+  right: -85px;
+  bottom: 350px;
 }/*# sourceMappingURL=style.css.map */
