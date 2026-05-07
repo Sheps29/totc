@@ -752,6 +752,8 @@ header {
 
   .right {
     position: relative;
+    max-width: 750px;
+    width: 100%;
 
     picture {
       max-width: 560px;
@@ -762,6 +764,8 @@ header {
         object-fit: cover;
         width: 100%;
         height: auto;
+        max-width: 560px;
+        max-height: 700px;
       }
 
       .arr {
@@ -771,6 +775,49 @@ header {
       }
     }
 
-    
+    .rose {
+      padding: 40px 40px 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      max-width: 620px;
+      border-left: 14px solid $orange-100;
+      position: absolute;
+      left: 50px;
+      bottom: -100px;
+      background-color: white;
+
+      p {
+        @include s;
+        padding-left: 32px;
+        border-left: 1px solid $grey;
+        line-height: 40px;
+        color: $grey-300;
+      }
+
+      .rating {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+          @include m;
+          line-height: 42px;
+          color: $grey-300;
+          font-weight: 600;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          span {
+            @include xxs;
+            color: $grey-400;
+            line-height: 34px;
+          }
+        }
+      }
+    }
   }
 }

@@ -713,6 +713,8 @@ header .burger {
 }
 .testimonial .right {
   position: relative;
+  max-width: 750px;
+  width: 100%;
 }
 .testimonial .right picture {
   max-width: 560px;
@@ -724,9 +726,50 @@ header .burger {
      object-fit: cover;
   width: 100%;
   height: auto;
+  max-width: 560px;
+  max-height: 700px;
 }
 .testimonial .right picture .arr {
   position: absolute;
   right: -85px;
   bottom: 350px;
+}
+.testimonial .right .rose {
+  padding: 40px 40px 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  max-width: 620px;
+  border-left: 14px solid #F67766;
+  position: absolute;
+  left: 50px;
+  bottom: -100px;
+  background-color: white;
+}
+.testimonial .right .rose p {
+  font-size: 22px;
+  padding-left: 32px;
+  border-left: 1px solid #BDBDD1;
+  line-height: 40px;
+  color: #5F5F7E;
+}
+.testimonial .right .rose .rating {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.testimonial .right .rose .rating .name {
+  font-size: 24px;
+  line-height: 42px;
+  color: #5F5F7E;
+  font-weight: 600;
+}
+.testimonial .right .rose .rating div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.testimonial .right .rose .rating div span {
+  font-size: 18px;
+  color: #80819A;
+  line-height: 34px;
 }/*# sourceMappingURL=style.css.map */
